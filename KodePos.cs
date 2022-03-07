@@ -8,35 +8,19 @@ namespace tpmodul3_1302204002
 {
     internal class KodePos
     {
-        public string getKodePos(String kelurahan)
+        String[] klr = { "Batununggal", "Kujangsari", "Mengger", "Wates", "Cijaura", "Jatisari", "Margasari", "Sekejati", "Kebonwaru", "Maleer", "Samoja" };
+        String[] kode = { "40266", "40287", "40267", "40256", "40287", "40286", "40286", "40286", "40272", "40274", "40273" };
+
+        public string getKodePos(String klr)
         {
-            switch(kelurahan)
+            for(int i = 0; i < this.klr.Length; i++)
             {
-                case "Batununggal":
-                    return "40266";
-                case "Kujangsari":
-                    return "40287";
-                case "Mengger":
-                    return "40267";
-                case "Wates":
-                    return "40256";
-                case "Cijaura":
-                    return "40287";
-                case "Jatisari":
-                    return "40286";
-                case "Margasari":
-                    return "40286";
-                case "Sekejati":
-                    return "40286";
-                case "Kebonwaru":
-                    return "40272";
-                case "Maleer":
-                    return "40274";
-                case "Samoja":
-                    return "40273";
-                default:
-                    return "Kelurahan tidak ditemukan!";
+                if(this.klr[i] == klr)
+                {
+                    return this.kode[i];
+                }
             }
+            return "Kelurahan tidak ditemukan";
         }
     }
 }

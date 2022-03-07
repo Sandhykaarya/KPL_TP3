@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace tpmodul3_1302204002 // Note: actual namespace depends on the project name.
+namespace tpmodul3_1302204002
 {
     internal class Program
     {
@@ -9,7 +9,7 @@ namespace tpmodul3_1302204002 // Note: actual namespace depends on the project n
         {
             KodePos kp = new KodePos();
 
-            Console.WriteLine(kp.getKodePos(Console.ReadLine()));
+            Console.WriteLine("Kode Pos: " + kp.getKodePos(Console.ReadLine()));
         }
     }
 }
